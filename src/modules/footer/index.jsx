@@ -1,0 +1,272 @@
+const Footer = () => {
+
+  const LINKS = [
+    {
+      title: "Product",
+      items: ["Overview", "Features", "Solutions", "Tutorials"],
+    },
+    {
+      title: "Company",
+      items: ["About us", "Careers", "Press", "News"],
+    },
+    {
+      title: "Resource",
+      items: ["Blog", "Newsletter", "Events", "Help center"],
+    },
+  ];
+  const aboutUsItems = [
+    {
+      label: 'Who we are?'
+    },
+    {
+      label: 'Management Team'
+    },
+    {
+      label: 'Careers'
+    },
+    {
+      label: 'Franchise Enquiry'
+    }
+  ]
+  const customerDelight = [
+    {
+      label: 'Contact Us'
+    },
+    {
+      label: 'FAQ'
+    },
+    {
+      label: '18004190066'
+    },
+    {
+      label: '(9 am-10 pm, 7 days a week)'
+    }
+  ]
+  const policies = [
+    {
+      label: '30-Day Return'
+    },
+    {
+      label: 'Lifetime Exchange & Buy back'
+    },
+    {
+      label: 'Terms & Conditions'
+    },
+    {
+      label: 'Fraud Warning Disclaimer'
+    }
+  ]
+  const shopWithConfidence = [
+    {
+      label: 'Why Buy From Us?'
+    },
+    {
+      label: 'Our Certifications'
+    },
+    {
+      label: 'Press Room'
+    },
+    {
+      label: 'Testimonials'
+    },
+    {
+      label: 'Corporate Gifting'
+    }
+  ]
+  const jewelleryGuide = [
+    {
+      label: 'Buying and Price Guide'
+    },
+    {
+      label: 'Certification Guide'
+    },
+    {
+      label: 'Diamond and Solitaire Guide'
+    },
+    {
+      label: 'Gemstone GuidC'
+    },
+    {
+      label: 'Jewellery Care Guide'
+    }
+  ]
+  return (
+    <div className="bg-footer w-full, h-full bg-[#478610] py-30 px-20 border text-white" style={{ padding: '40px 80px 200px 80px' }}>
+      <div className='flex flex-row'>
+        <div className='pb-20'>
+          {/* <Image
+            className='w-[150px]'
+            src={Logo}
+          /> */}
+        </div>
+      </div>
+      <div className=" flex justify-between text-white">
+        <div >
+          <h2 className={`mb-3 text-base font-normal text-white`}>
+            ABOUT US
+          </h2>
+          <ul className=' list-disc list-outside leading-10 text-white pl-7'>
+            {aboutUsItems?.map(({ label }) => (
+              <li>{label}</li>
+            ))}
+
+          </ul>
+          <h2 className={`my-3 text-sm font-normal text-white`}>
+            CUSTOMER DELIGHT
+          </h2>
+          <ul className=' list-disc list-outside leading-10 text-white pl-7'>
+            {customerDelight?.map(({ label }) => (
+              <li>{label}</li>
+            ))}
+
+          </ul>
+        </div>
+        <div className='border-r-2' />
+        <div>
+          <h2 className={`mb-3 text-base font-normal text-white`}>POLICIES</h2>
+          <ul className=' list-disc list-outside leading-10 text-white pl-7'>
+            {policies?.map(({ label }) => (
+              <li>{label}</li>
+            ))}
+
+          </ul>
+          <h2 className={`my-3 text-base font-normal text-white`}>
+            SHOP WITH CONFIDENCE
+          </h2>
+          <ul className=' list-disc list-outside leading-10 text-white pl-7'>
+            {shopWithConfidence?.map(({ label }) => (
+              <li>{label}</li>
+            ))}
+
+          </ul>
+        </div>
+        <div className='border-r-2' />
+
+        <div>
+          <h2 className={`my-3 text-base font-normal text-white`}>
+            JEWELLERY GUIDE
+          </h2>
+          <ul className=' list-disc list-outside leading-10 text-white pl-7'>
+            {jewelleryGuide?.map(({ label }) => (
+              <li>{label}</li>
+            ))}
+
+          </ul>
+          {/* <h2 className={`my-3 text-base font-normal text-white`}>
+            JEWELLERY GUIDE
+          </h2> */}
+          <p className='leading-loose'>Download</p>
+          <p className='leading-loose'>Our App</p>
+          <p className='leading-loose'>Shining new app,made justfor you!</p>
+          <p className='leading-loose'>It's Free,Easy & Smart.</p>
+        </div>
+      </div>
+
+    </div>
+    // <footer class="bg-white dark:bg-gray-900">
+    //   <div class="container px-6 py-12 mx-auto">
+    //     <div class="text-center">
+    //       <h2 class="text-2xl font-semibold text-gray-800 dark:text-white">Let’s get started on something great</h2>
+
+    //       <p class="max-w-md mx-auto mt-2 text-gray-500 dark:text-gray-400">Join over 4,000+ startups already growing with Meraki UI.</p>
+
+    //       <div class="flex flex-col mt-6 sm:flex-row sm:items-center sm:justify-center">
+    //         <button class="w-full px-5 py-2 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md sm:mx-2 sm:order-2 sm:w-auto hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">Get started</button>
+    //       </div>
+    //     </div>
+
+    //     <div class="grid grid-cols-2 gap-6 mt-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Product</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Overview</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Features</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Solutions</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Tutorials</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Pricing</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Releases</a>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Company</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">About us</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Careers</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Press</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">News</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Media kit</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Contact</a>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Resources</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Blog</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Newsletter</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Events</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Help center</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Tutorials</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Supports</a>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Use cases</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Startups</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Enterprise</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Government</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Saas</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Marketplaces</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Ecommerce</a>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Social</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Twitter</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">LinkedIn</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Github</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Facebook</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">AngelList</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Dribble</a>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <h3 class="text-sm font-medium text-gray-500 dark:text-gray-400">Legal</h3>
+
+    //         <div class="flex flex-col items-start mt-4 space-y-4">
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Terms</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Privacy</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Cookies</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Licenses</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Settings</a>
+    //           <a href="#" class="text-gray-700 transition-colors duration-200 dark:text-gray-200 dark:hover:text-blue-400 hover:underline hover:text-blue-600">Contact</a>
+    //         </div>
+    //       </div>
+    //     </div>
+
+    //     <hr class="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+
+    //     <div class="flex flex-col items-center justify-between sm:flex-row">
+    //       <a href="#">
+    //         <img class="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt="" />
+    //       </a>
+
+    //       <p class="mt-4 text-sm text-gray-500 sm:mt-0 dark:text-gray-300">© Copyright 2023. All Rights Reserved.</p>
+    //     </div>
+    //   </div>
+    // </footer>
+  )
+}
+
+export default Footer
