@@ -44,7 +44,7 @@ const SignIn = (props) => {
     <div class="flex justify-center  items-center h-[100vh]">
 
       <Card color="transparent" shadow={false}>
-        <Typography variant="h4" className="text-center" color="teal">
+        <Typography variant="h4" className="text-center text-[#033C02]">
           USER LOGIN
         </Typography>
         <form className="mt-8 mb-2 w-100 max-w-screen-lg sm:w-96">
@@ -88,19 +88,19 @@ const SignIn = (props) => {
             }
             containerProps={{ className: "ml-2.5" }}
           />
-          <Link className="text-[#E6665D] text-right m-auto float-end pb-4" to='/login'>Forgot Password ?</Link>
+          <Link className="text-[#E6665D] text-right m-auto float-end pb-4" to='/reset-password'>Forgot Password ?</Link>
           </div>
           <div className="flex w-full flex-col justify-center items-center md:justify-start md:items-start mb-3">
 
-          <Button className="mt-6 w-60 mx-auto" color="teal"
+          <Button className="mt-6 w-60 mx-auto bg-[#478610]" 
             onClick={submitHandler}>
             Login
           </Button>
           </div>
           <Typography color="gray" className="mt-4 text-center font-normal">
-            Already have an account?{" "}
+            Don't have an account?{" "}
             <a href="/sign-up" className="font-medium text-gray-900">
-              Sign In
+              Create Account
             </a>
           </Typography>
         </form>

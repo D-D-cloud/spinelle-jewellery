@@ -20,8 +20,10 @@ const SignUp = (props) => {
 
   const submitHandler = () => {
     API.POST(getFullUrl(endPoints.signUp), payload).then((response) => {
-      console.log(response)
-      if (response) navigate('/dashboard')
+      console.log("respo"+response.status)
+      if (response.status === 400){
+        navigate('/dashboard')
+      } 
     })
   }
 
