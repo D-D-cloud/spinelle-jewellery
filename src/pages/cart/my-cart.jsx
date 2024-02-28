@@ -1,160 +1,333 @@
 import React from "react";
 import Layout from "../../components/layout";
-import {
-    Tabs,
-    TabsHeader,
-    TabsBody,
-    Tab,
-    TabPanel,
-  } from "@material-tailwind/react";
-import Copuon from '../../assests/images/Coupon.png'
+
 export const Cart = () => {
 
-    const data = [
-        {
-          label: "shopping cart (1)",
-          value: "shopping cart (1)",
-        },
-        {
-          label: "Trial cart (o)",
-          value: "Trial cart (o)",
-         
-        },
-      ];
- 
-      
     return (
         <Layout showFooter={false}>
+            <div className="w-full mx-auto md:w-10/12 overflow-x-scroll px-4 md:overflow-x-hidden">
+                <table role="table" className="w-full min-w-[500px] overflow-x-scroll">
+                    <thead>
+                        <tr role="row" >
+                            <th
+                                colspan="1"
+                                role="columnheader"
+                                title="Toggle SortBy"
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <div
+                                    className="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xl md:text-xl"
+                                >
+                                    Shopping Cart
+                                </div>
+                            </th>
+                            <th
+                                colspan="1"
+                                role="columnheader"
+                                title="Toggle SortBy"
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <div
+                                    className="flex items-center justify-center pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xl"
+                                >
+                                    <p>QTY</p>
+                                </div>
+                            </th>
+                            <th
+                                colspan="1"
+                                role="columnheader"
+                                title="Toggle SortBy"
+                                style={{ cursor: 'pointer' }}
 
-<Tabs value="html" className="w-[auto] m-10">
-      <TabsHeader
-        className="bg-[#478610] w-[300px] ml-64 "
-        indicatorProps={{
-          className: "bg-white shadow-none !text-gray-900",
-        }}
-      >
-        {data.map(({ label, value }) => (
-          <Tab key={value} value={value}>
-            {label}
-          </Tab>
-        ))}
-      </TabsHeader>
-      <TabsBody>
-        {data.map(({ value, desc }) => (
-          <TabPanel key={value} value={value}>
-           
-           <div class="w- full h-full bg-gray-100 pt-20 pb-20">
-    <div class="mx-auto max-w-6xl justify-center px-6 md:flex md:space-x-6 xl:px-0">
-      <div class="rounded-lg md:w-2/3">
-        <div class="justify-between mb-6 rounded-lg bg-white  border-[1px] border-black p-6 shadow-md sm:flex sm:justify-start">
-          <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="product-image" class="w-full rounded-lg sm:w-40" />
-          <div class="sm:ml-4 sm:flex sm:w-full sm:justify-between">
-            <div class="mt-5 sm:mt-0">
-              <h2 class="text-lg font-bold text-gray-900 mt-5">Nike Air Max 2019</h2>
-              <p class="mt-1 text-xs text-gray-700">36EU - 4US</p>
-              <div class="flex items-center border-gray-100 mt-3">
-                <span class="cursor-pointer rounded-l bg-gray-100 py-1 px-3.5 duration-100 hover:bg-blue-500 hover:text-blue-50"> - </span>
-                <input class="h-8 w-8 border bg-white text-center text-xs outline-none" type="number" value="2" min="1" />
-                <span class="cursor-pointer rounded-r bg-gray-100 py-1 px-3 duration-100 hover:bg-blue-500 hover:text-blue-50"> + </span>
-              </div>    
+                            >
+                                <div
+                                    className="flex items-center justify-between pb-2 pt-4 text-start uppercase tracking-wide text-gray-600 sm:text-xs lg:text-xl"
+                                >
+                                    Price
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody role="rowgroup" className="px-4">
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40 md:h-50">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
 
-              <p class="mt-3  text-[#478610] underline decoration-[#478610] text-lg">check delivery date</p>
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
 
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
+
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
+
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
+
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+                        <tr role="row">
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex items-center gap-2">
+                                    <div className="w-full md:w-40">
+                                        <img
+                                            src="https://i.ibb.co/L039qbN/Rectangle-10.png"
+                                            className="rounded-sm h-[130px]"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div className="space-y-2">
+                                        <h2>Kurta</h2>
+
+                                        <p
+                                            className="text-sm font-medium text-navy-700 "
+                                        >
+                                            Order ID
+                                        </p>
+                                        <p
+                                            className="text-sm font-medium text-navy-70"
+                                        >
+                                            Remove
+                                        </p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <div className="flex mt-2 items-center justify-center  mr-2 w-full m-auto sm:w-auto px-5 py-1.5">
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                    <div className="m-3 flex h-10 w-10 items-center justify-center rounded-full bg-[#FFE6D8]">
+                                        <p>2</p>
+                                    </div>
+                                    <button className="text-gray-500 focus:outline-none focus:text-gray-600">
+                                        <svg className="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                    </button>
+                                </div>
+                            </td>
+                            <td className="py-3 text-sm" role="cell">
+                                <p className="text-md font-medium text-gray-600">
+                                    9821
+                                </p>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <div className="flex w-full flex-row justify-end items-end md:justify-end md:items-end my-10">
+                    <button type="button" className="bg-[#FFE6D8] font-medium rounded-full float-end text-sm w-[300px] px-5 py-2.5 text-center dark:focus:ring-blue-800">Place Order</button>
+                </div>
             </div>
-            <div class="mt-4 flex justify-between sm:space-y-6 sm:mt-0 sm:block sm:space-x-6">
-              
-              <div class="flex float-right">
-                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg> */}
-
-                <svg  viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" stroke-width="1.5"  stroke="currentColor" class="h-5 w-5 cursor-pointer duration-150 hover:text-red-500">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M20 10C20 15.523 15.523 20 10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10ZM6.111 13.889C6.01726 13.7952 5.96461 13.6681 5.96461 13.5355C5.96461 13.4029 6.01726 13.2758 6.111 13.182L9.293 10L6.111 6.818C6.01992 6.7237 5.96952 6.5974 5.97066 6.4663C5.9718 6.3352 6.02439 6.20979 6.11709 6.11709C6.20979 6.02439 6.3352 5.9718 6.4663 5.97066C6.5974 5.96952 6.7237 6.01992 6.818 6.111L10 9.293L13.182 6.111C13.2763 6.01992 13.4026 5.96952 13.5337 5.97066C13.6648 5.9718 13.7902 6.02439 13.8829 6.11709C13.9756 6.20979 14.0282 6.3352 14.0293 6.4663C14.0305 6.5974 13.9801 6.7237 13.889 6.818L10.707 10L13.889 13.182C13.9801 13.2763 14.0305 13.4026 14.0293 13.5337C14.0282 13.6648 13.9756 13.7902 13.8829 13.8829C13.7902 13.9756 13.6648 14.0282 13.5337 14.0293C13.4026 14.0305 13.2763 13.9801 13.182 13.889L10 10.707L6.818 13.889C6.72424 13.9827 6.59708 14.0354 6.4645 14.0354C6.33192 14.0354 6.20476 13.9827 6.111 13.889Z" fill="black"/>
-</svg>
-
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* <!-- Sub total --> */}
-      <div class="h-full md:mt-0 md:w-1/3">
-      <div class="rounded-lg border-[1px] border-black bg-transparent p-3 shadow-md ">
-        <div class=" flex justify-between">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.7384 9.98797L19.8424 8.07997C19.9751 7.85041 20.0112 7.57756 19.9427 7.3214C19.8743 7.06524 19.7069 6.84675 19.4774 6.71397L17.5674 5.60997V3.40997C17.5674 3.14476 17.462 2.8904 17.2745 2.70287C17.087 2.51533 16.8326 2.40997 16.5674 2.40997H14.3684L13.2654 0.500973C13.1322 0.271889 12.9141 0.104478 12.6584 0.0349725C12.5316 0.000588391 12.3992 -0.0082777 12.2689 0.00888808C12.1386 0.0260539 12.013 0.0689102 11.8994 0.134973L9.98939 1.23897L8.07939 0.133972C7.84971 0.00137018 7.57677 -0.0345644 7.32059 0.0340734C7.06442 0.102711 6.846 0.2703 6.71339 0.499973L5.60939 2.40997H3.41039C3.14517 2.40997 2.89082 2.51533 2.70328 2.70287C2.51575 2.8904 2.41039 3.14476 2.41039 3.40997V5.60897L0.50039 6.71297C0.386423 6.77853 0.286531 6.86596 0.206455 6.97023C0.126379 7.07451 0.0676967 7.19359 0.0337796 7.32061C-0.00013759 7.44764 -0.00862102 7.58012 0.00881666 7.71043C0.0262543 7.84075 0.0692693 7.96633 0.13539 8.07997L1.23939 9.98797L0.13539 11.896C0.00337926 12.1257 -0.0324375 12.3984 0.0357489 12.6545C0.103935 12.9105 0.270595 13.1293 0.499391 13.263L2.40939 14.367V16.566C2.40939 16.8312 2.51475 17.0855 2.70228 17.2731C2.88982 17.4606 3.14417 17.566 3.40939 17.566H5.60939L6.71339 19.476C6.80192 19.6273 6.92833 19.753 7.08017 19.8407C7.23201 19.9283 7.40406 19.975 7.57939 19.976C7.75339 19.976 7.92639 19.93 8.08039 19.841L9.98839 18.737L11.8984 19.841C12.128 19.9734 12.4008 20.0093 12.6569 19.9409C12.9129 19.8725 13.1314 19.7053 13.2644 19.476L14.3674 17.566H16.5664C16.8316 17.566 17.086 17.4606 17.2735 17.2731C17.461 17.0855 17.5664 16.8312 17.5664 16.566V14.367L19.4764 13.263C19.5902 13.1972 19.6899 13.1097 19.7698 13.0054C19.8497 12.9011 19.9083 12.7821 19.9422 12.6551C19.9761 12.5282 19.9846 12.3958 19.9673 12.2655C19.95 12.1353 19.9072 12.0097 19.8414 11.896L18.7384 9.98797ZM7.48839 4.97797C7.88635 4.97811 8.26795 5.13632 8.54926 5.41781C8.83056 5.6993 8.98852 6.08102 8.98839 6.47897C8.98826 6.87693 8.83004 7.25854 8.54855 7.53984C8.26706 7.82114 7.88535 7.97911 7.48739 7.97897C7.08943 7.97884 6.70783 7.82062 6.42652 7.53913C6.14522 7.25764 5.98726 6.87593 5.98739 6.47797C5.98752 6.08002 6.14574 5.69841 6.42723 5.41711C6.70872 5.1358 7.09043 4.97784 7.48839 4.97797ZM7.78839 14.578L6.18839 13.379L12.1884 5.37897L13.7884 6.57797L7.78839 14.578ZM12.4884 14.978C12.2913 14.9779 12.0962 14.939 11.9142 14.8636C11.7322 14.7881 11.5668 14.6775 11.4275 14.5381C11.2882 14.3988 11.1778 14.2333 11.1024 14.0512C11.0271 13.8692 10.9883 13.674 10.9884 13.477C10.9885 13.2799 11.0273 13.0848 11.1028 12.9028C11.1783 12.7208 11.2888 12.5554 11.4282 12.4161C11.5676 12.2768 11.7331 12.1663 11.9151 12.091C12.0972 12.0157 12.2923 11.9769 12.4894 11.977C12.8873 11.9771 13.269 12.1353 13.5503 12.4168C13.8316 12.6983 13.9895 13.08 13.9894 13.478C13.9893 13.8759 13.831 14.2575 13.5496 14.5388C13.2681 14.8201 12.8863 14.9781 12.4884 14.978Z" fill="#033C02"/>
-        </svg>
-          <p class="text-[#8E791C] underline decoration-[#8E791C]">Apply Coupon</p>
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18.7384 9.98797L19.8424 8.07997C19.9751 7.85041 20.0112 7.57756 19.9427 7.3214C19.8743 7.06524 19.7069 6.84675 19.4774 6.71397L17.5674 5.60997V3.40997C17.5674 3.14476 17.462 2.8904 17.2745 2.70287C17.087 2.51533 16.8326 2.40997 16.5674 2.40997H14.3684L13.2654 0.500973C13.1322 0.271889 12.9141 0.104478 12.6584 0.0349725C12.5316 0.000588391 12.3992 -0.0082777 12.2689 0.00888808C12.1386 0.0260539 12.013 0.0689102 11.8994 0.134973L9.98939 1.23897L8.07939 0.133972C7.84971 0.00137018 7.57677 -0.0345644 7.32059 0.0340734C7.06442 0.102711 6.846 0.2703 6.71339 0.499973L5.60939 2.40997H3.41039C3.14517 2.40997 2.89082 2.51533 2.70328 2.70287C2.51575 2.8904 2.41039 3.14476 2.41039 3.40997V5.60897L0.50039 6.71297C0.386423 6.77853 0.286531 6.86596 0.206455 6.97023C0.126379 7.07451 0.0676967 7.19359 0.0337796 7.32061C-0.00013759 7.44764 -0.00862102 7.58012 0.00881666 7.71043C0.0262543 7.84075 0.0692693 7.96633 0.13539 8.07997L1.23939 9.98797L0.13539 11.896C0.00337926 12.1257 -0.0324375 12.3984 0.0357489 12.6545C0.103935 12.9105 0.270595 13.1293 0.499391 13.263L2.40939 14.367V16.566C2.40939 16.8312 2.51475 17.0855 2.70228 17.2731C2.88982 17.4606 3.14417 17.566 3.40939 17.566H5.60939L6.71339 19.476C6.80192 19.6273 6.92833 19.753 7.08017 19.8407C7.23201 19.9283 7.40406 19.975 7.57939 19.976C7.75339 19.976 7.92639 19.93 8.08039 19.841L9.98839 18.737L11.8984 19.841C12.128 19.9734 12.4008 20.0093 12.6569 19.9409C12.9129 19.8725 13.1314 19.7053 13.2644 19.476L14.3674 17.566H16.5664C16.8316 17.566 17.086 17.4606 17.2735 17.2731C17.461 17.0855 17.5664 16.8312 17.5664 16.566V14.367L19.4764 13.263C19.5902 13.1972 19.6899 13.1097 19.7698 13.0054C19.8497 12.9011 19.9083 12.7821 19.9422 12.6551C19.9761 12.5282 19.9846 12.3958 19.9673 12.2655C19.95 12.1353 19.9072 12.0097 19.8414 11.896L18.7384 9.98797ZM7.48839 4.97797C7.88635 4.97811 8.26795 5.13632 8.54926 5.41781C8.83056 5.6993 8.98852 6.08102 8.98839 6.47897C8.98826 6.87693 8.83004 7.25854 8.54855 7.53984C8.26706 7.82114 7.88535 7.97911 7.48739 7.97897C7.08943 7.97884 6.70783 7.82062 6.42652 7.53913C6.14522 7.25764 5.98726 6.87593 5.98739 6.47797C5.98752 6.08002 6.14574 5.69841 6.42723 5.41711C6.70872 5.1358 7.09043 4.97784 7.48839 4.97797ZM7.78839 14.578L6.18839 13.379L12.1884 5.37897L13.7884 6.57797L7.78839 14.578ZM12.4884 14.978C12.2913 14.9779 12.0962 14.939 11.9142 14.8636C11.7322 14.7881 11.5668 14.6775 11.4275 14.5381C11.2882 14.3988 11.1778 14.2333 11.1024 14.0512C11.0271 13.8692 10.9883 13.674 10.9884 13.477C10.9885 13.2799 11.0273 13.0848 11.1028 12.9028C11.1783 12.7208 11.2888 12.5554 11.4282 12.4161C11.5676 12.2768 11.7331 12.1663 11.9151 12.091C12.0972 12.0157 12.2923 11.9769 12.4894 11.977C12.8873 11.9771 13.269 12.1353 13.5503 12.4168C13.8316 12.6983 13.9895 13.08 13.9894 13.478C13.9893 13.8759 13.831 14.2575 13.5496 14.5388C13.2681 14.8201 12.8863 14.9781 12.4884 14.978Z" fill="#033C02"/>
-        </svg>
-        </div>       
-       </div>
-       
-        <div class="p-3 m-3 flex">
-        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M11 7C8.79 7 7 8.79 7 11C7 13.21 8.79 15 11 15C13.21 15 15 13.21 15 11C15 8.79 13.21 7 11 7ZM19.94 10C19.7135 7.97212 18.8042 6.08154 17.3613 4.63869C15.9185 3.19585 14.0279 2.28651 12 2.06V0H10V2.06C7.97212 2.28651 6.08154 3.19585 4.63869 4.63869C3.19585 6.08154 2.28651 7.97212 2.06 10H0V12H2.06C2.28651 14.0279 3.19585 15.9185 4.63869 17.3613C6.08154 18.8042 7.97212 19.7135 10 19.94V22H12V19.94C14.0279 19.7135 15.9185 18.8042 17.3613 17.3613C18.8042 15.9185 19.7135 14.0279 19.94 12H22V10H19.94ZM11 18C7.13 18 4 14.87 4 11C4 7.13 7.13 4 11 4C14.87 4 18 7.13 18 11C18 14.87 14.87 18 11 18Z" fill="#033C02"/>
-</svg>
-
-          <p class="text-black float-left ml-5"> Check delivery & Store details</p>
-          
-        </div>    
-        <div class="p-3 flex justify-center">
-       
-
-          <p class="text-[#033C02] float-left">Enter Pincode</p>
-          
-        </div>     
-       
-       
-      <div class="mt-6 h-full rounded-lg  bg-[#478610] p-6 shadow-2xl ">
-        <div class="mb-2 flex justify-between m-2">
-          <p class="text-white">sub total</p>
-          <p class="text-white">$25,000</p>
-        </div>
-        <div class="flex justify-between m-2">
-          <p class="text-white">you saved</p>
-          <p class="text-white">-$5,700</p>
-        </div>
-        <div class="flex justify-between m-2">
-          <p class="text-white">coupon discount</p>
-          <p class="text-[#F4D447] text-xl">Apply Coupon</p>
-        </div><div class="flex justify-between m-2">
-          <p class="text-white">shipping (standard)</p>
-          <p class="text-white">Free</p>
-        </div>
-        <hr class="my-4" />
-        <div class="flex justify-between">
-          <p class="text-lg  text-white font-bold">Total</p>
-          <div class="">
-            <p class="mb-1 text-lg font-bold text-white">$134.98 USD</p>
-            <p class="text-sm text-white">including VAT</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="p-3 flex justify-center">
-       
-
-      <button class="mt-6 w-[250px] rounded-md bg-[#478610] py-1.5 font-medium text-blue-50 hover:bg-[#033C02]">Check out</button>
-       
-     </div> 
-
-
-      </div>
-      
-    </div>
-  </div>
-          </TabPanel>
-        ))}
-      </TabsBody>
-    </Tabs>
-
-
         </Layout>
     )
 }
-
-
 
