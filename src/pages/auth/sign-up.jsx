@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { API, endPoints, getFullUrl } from "../../apiConfig";
+import { endPoints, postRequest } from "../../apiConfig";
 
 const SignUp = (props) => {
   const navigate = useNavigate()
@@ -19,11 +19,11 @@ const SignUp = (props) => {
   }
 
   const submitHandler = () => {
-    API.POST(getFullUrl(endPoints.signUp), payload).then((response) => {
-      console.log("respo"+response.status)
-      if (response.status === 400){
-        navigate('/dashboard')
-      } 
+    postRequest(endPoints.signUp, payload).then(async (response) => {
+      if (response) {
+        await localStorage.setItem("token", response?.token);
+        await navigate('/dashboard')
+      }
     })
   }
 

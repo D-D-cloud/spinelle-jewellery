@@ -14,6 +14,9 @@ const DashBoard = () => {
     <Layout showFooter={true}>
       <Banner />
 
+      <h2 className="text-center text-green-500 my-3 text-2xl">Diamond Search</h2>
+      <p className="text-center">Choose a category below to begin your search in best diamond jewellery in kerala</p>
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-4 bg-white my-10">
         <div className="w-full bg-white rounded-lg p-12 flex flex-col justify-center items-center">
           <div className="mb-4">
@@ -76,6 +79,74 @@ const DashBoard = () => {
         />
       </Carousel>
 
+      <h1 className="text-center my-3 text-3xl text-green-500" >New Daimond Jewellery Arrivals</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 my-10">
+        <div className="w-full rounded-sm p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            {/* <img className="object-center object-cover rounded-full h-36 w-36" src={Women} alt="photo" /> */}
+            <img className="object-center object-cover  h-[190px] w-[190px]" src={Women} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full  p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover h-[190px] w-[190px]" src={Men} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full  p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover h-[190px] w-[190px]" src={Boys} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover  h-[190px] w-[190px]" src={Girls} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full  p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover h-[190px] w-[190px]" src={Girls} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover h-[190px] w-[190px]" src={Girls} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full  p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover  h-[190px] w-[190px]" src={Girls} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+        <div className="w-full  p-12 flex flex-col justify-center items-center">
+          <div className="mb-4">
+            <img className="object-center object-cover h-[190px] w-[190px]" src={Girls} alt="photo" />
+          </div>
+          <div className="text-center">
+            <p className="text-sm text-gray-700 font-bold mb-2">Kurta</p>
+          </div>
+        </div>
+      </div>
 
     </Layout>
   )
