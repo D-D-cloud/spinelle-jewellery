@@ -9,9 +9,10 @@ import {
 
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { API, endPoints, getFullUrl } from "../../apiConfig";
+import { endPoints, postRequest } from "../../apiConfig";
 import Email from '../../assests/images/email.png'
 import Password from '../../assests/images/pswd.png'
+
 const SignIn = (props) => {
   const navigate = useNavigate()
 
@@ -27,16 +28,20 @@ const SignIn = (props) => {
     setPayload({ ...payload, [name]: value })
   }
 
-
   const submitHandler = () => {
     if (payload?.mobileNoOrEmail === '' || payload?.password === '') {
       alert('Please enter user name or password')
       return;
     }
 
-    API.POST(getFullUrl(endPoints.signIn), payload).then((response) => {
+    postRequest(endPoints.signIn, payload).then(async (response) => {
       console.log(response)
-      if (response) navigate('/dashboard')
+
+      if (response) {
+        await localStorage.setItem("token", response?.token);
+        await navigate('/dashboard')
+      }
+
     })
   }
 
@@ -75,27 +80,27 @@ const SignIn = (props) => {
           </div>
           <div className="m">
 
-          <Checkbox
-            color="teal"
-            label={
-              <Typography
-                variant="small"
-                color="gray"
-                className="flex items-center font-normal"
-              >
-                Remeber Me
-              </Typography>
-            }
-            containerProps={{ className: "ml-2.5" }}
-          />
-          <Link className="text-[#E6665D] text-right m-auto float-end pb-4" to='/reset-password'>Forgot Password ?</Link>
+            <Checkbox
+              color="teal"
+              label={
+                <Typography
+                  variant="small"
+                  color="gray"
+                  className="flex items-center font-normal"
+                >
+                  Remeber Me
+                </Typography>
+              }
+              containerProps={{ className: "ml-2.5" }}
+            />
+            <Link className="text-[#E6665D] text-right m-auto float-end pb-4" to='/reset-password'>Forgot Password ?</Link>
           </div>
           <div className="flex w-full flex-col justify-center items-center md:justify-start md:items-start mb-3">
 
-          <Button className="mt-6 w-60 mx-auto bg-[#478610]" 
-            onClick={submitHandler}>
-            Login
-          </Button>
+            <Button className="mt-6 w-60 mx-auto bg-[#478610]"
+              onClick={submitHandler}>
+              Login
+            </Button>
           </div>
           <Typography color="gray" className="mt-4 text-center font-normal">
             Don't have an account?{" "}

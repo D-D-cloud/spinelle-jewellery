@@ -53,7 +53,7 @@ function CheckIcon() {
 }
 
 export const ProductDetails = () => {
-  const [loadingDetails, setLoadingDetails] = useState(true);
+  const [loadingDetails, setLoadingDetails] = useState(false);
   const [open, setOpen] = React.useState(0);
   const [data, setData]=useState({
     id: 1,
@@ -99,14 +99,10 @@ const handleOpen = (value) => setOpen(open === value ? 0 : value);
   axios.get(`https://fakestoreapi.com/products/1`)
   .then(res => {
     // setData(res.data)
-    setLoadingDetails(false)
+    // setLoadingDetails(false)
     console.log(data)
   })
  }
-  useEffect(()=>{
-
-   
-  },[])
   return (
     <Layout showFooter={false}>
       <button onClick={() => {getProductDetails()}}>get product</button>

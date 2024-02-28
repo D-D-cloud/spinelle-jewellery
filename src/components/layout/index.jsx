@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../modules/footer";
 import Header from "../../modules/header";
+import { MegaMenuWithHover } from "../../modules/navbar";
 const Layout = (props) => {
     const { children, showFooter = true } = props
 
@@ -12,6 +13,7 @@ const Layout = (props) => {
             {/* <SideBar /> */}
             <section className="layout_main">
                 <Header />
+                <MegaMenuWithHover />
                 {children}
             </section>
             {showFooter &&
